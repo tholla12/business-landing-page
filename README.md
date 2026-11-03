@@ -2,7 +2,7 @@
 
 A responsive, multi-section landing page for an imaginary bakery. Built to practise layout, accessibility and form handling with plain HTML, CSS and JavaScript.
 
-**Live demo:** _add your GitHub Pages link here_
+**Live demo:** _https://tholla12.github.io/business-landing-page/_
 
 ## Features
 
