@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Crust Bakery</title>
+  <meta name="description" content="Golden Crust Bakery: fresh bread, pastries and coffee baked every morning.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top">Golden Crust</a>
+      <!-- The button below shows and hides the menu on small screens (see script.js) -->
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">Menu</button>
+      <nav class="site-nav" id="siteNav" aria-label="Main">
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#visit">Visit</a>
+        <a href="#contact" class="nav-cta">Order</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <p class="eyebrow">Baked fresh every morning</p>
+        <h1>Bread that tastes like it came out of the oven five minutes ago.</h1>
+        <p class="lede">Small-batch sourdough, flaky pastries and good coffee. Order ahead and pick it up warm.</p>
+        <a class="btn" href="#contact">Place an order</a>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="container">
+        <h2>Our menu</h2>
+        <p class="section-intro">A short menu, made well. Prices are per item.</p>
+        <ul class="menu-grid">
+          <li class="menu-item"><div><h3>Sourdough loaf</h3><p>Slow-fermented for 24 hours with a crisp crust.</p></div><span class="price">$6.50</span></li>
+          <li class="menu-item"><div><h3>Butter croissant</h3><p>Laminated by hand with real butter.</p></div><span class="price">$3.80</span></li>
+          <li class="menu-item"><div><h3>Cinnamon roll</h3><p>Soft, sticky and topped with cream cheese icing.</p></div><span class="price">$4.20</span></li>
+          <li class="menu-item"><div><h3>Meat pie</h3><p>Seasoned beef and potato in a golden pastry.</p></div><span class="price">$4.50</span></li>
+          <li class="menu-item"><div><h3>Banana bread</h3><p>Moist, lightly spiced and full of ripe bananas.</p></div><span class="price">$5.00</span></li>
+          <li class="menu-item"><div><h3>Filter coffee</h3><p>Medium roast, refills are free.</p></div><span class="price">$2.50</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section alt" id="about">
+      <div class="container two-col">
+        <div>
+          <h2>About us</h2>
+          <p>Golden Crust started with one oven and a simple idea: bake only what we would happily eat ourselves. We use flour from local mills, real butter and no shortcuts.</p>
+          <p>Every loaf is shaped by hand, and everything on the menu sells out most days, so we bake in small batches throughout the morning.</p>
+        </div>
+        <ul class="facts" aria-label="Facts about the bakery">
+          <li><strong>24h</strong><span>dough fermentation</span></li>
+          <li><strong>5am</strong><span>first bake every day</span></li>
+          <li><strong>100%</strong><span>made on site</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="visit">
+      <div class="container two-col">
+        <div>
+          <h2>Opening hours</h2>
+          <table class="hours">
+            <tbody>
+              <tr><th scope="row">Monday to Friday</th><td>7:00 am to 6:00 pm</td></tr>
+              <tr><th scope="row">Saturday</th><td>8:00 am to 5:00 pm</td></tr>
+              <tr><th scope="row">Sunday</th><td>8:00 am to 2:00 pm</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h2>Find us</h2>
+          <p>12 Example Street<br>Your City</p>
+          <p>This is a sample business created for a portfolio project.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="contact">
+      <div class="container narrow">
+        <h2>Place an order</h2>
+        <p class="section-intro">Tell us what you would like and when you will pick it up.</p>
+        <!-- novalidate lets our own JavaScript show friendlier error messages -->
+        <form id="orderForm" novalidate>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+            <p class="error" id="nameError" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+            <p class="error" id="emailError" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="order">What would you like?</label>
+            <textarea id="order" name="order" rows="4" required></textarea>
+            <p class="error" id="orderError" role="alert"></p>
+          </div>
+          <button class="btn" type="submit">Send order</button>
+          <p class="success" id="formSuccess" role="status" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Golden Crust Bakery. A portfolio project.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
